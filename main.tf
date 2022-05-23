@@ -25,7 +25,7 @@ resource "sendgrid_api_key" "api_key" {
 }
 
 
-output "SG_KEY" {
+output "SENDGRID_MAIL_API_KEY" {
   sensitive = true
   value     = sendgrid_api_key.api_key.api_key
 }
