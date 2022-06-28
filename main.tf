@@ -1,4 +1,6 @@
 terraform {
+  backend "s3" {}
+
   required_providers {
     sendgrid = {
       source  = "registry.terraform.io/Trois-Six/sendgrid"
