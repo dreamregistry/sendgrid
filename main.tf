@@ -31,3 +31,8 @@ output "SENDGRID_MAIL_API_KEY" {
   sensitive = true
   value     = sendgrid_api_key.api_key.api_key
 }
+
+output "SENDGRID_EMAIL_SERVER" {
+  sensitive = true
+  value     = "smtp://apikey:${sendgrid_api_key.api_key.api_key}@smtp.sendgrid.net:587"
+}
