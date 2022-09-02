@@ -23,6 +23,8 @@ resource "sendgrid_api_key" "api_key" {
   name   = random_pet.api_key_name.id
   scopes = [
     "mail.send",
+    "2fa_required",
+    "sender_verification_eligible"
   ]
 }
 
